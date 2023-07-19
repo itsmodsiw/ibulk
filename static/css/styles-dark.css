@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #121212;
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.card {
+    border: none;
+}
+
+.card .card-body {
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+}

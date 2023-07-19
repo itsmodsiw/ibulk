@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <title>modsiw's iBulk Image Converter</title>
+    <meta name="audience" content="all">
+    <meta name="keywords" content="Image Converter, Bulk Image Converter, Convert Images, Resize Images, iBulk, modsiw, Image Processing, Online Image Conversion, Gamer Screenshot Management, Influencer Photo Management, Photography, Photo Editing, Screenshot Editing">
+    <meta name="description" content="Convert your images in bulk to different formats with ease and efficiency. Perfect for gamers managing their screenshots, influencers managing their photos, and anyone else in need of bulk image conversion.">
+    <meta name="author" content="modsiw">
+    <meta name="owner" content="modsiw">
+    <meta name="url" content="https://ibulk.rl2.io">
+    <meta name="identifier-URL" content="https://ibulk.rl2.io">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="rating" content="general">
+    <meta name="revisit-after" content="7 days">
+    <meta name="abstract" content="">
+    <meta name="topic" content="">
+    <meta name="summary" content="">
+    <meta name="classification" content="Business">
+    <meta name="designer" content="modsiw">
+    <meta name="reply-to" content="modsiw@modsiw.io">
+    <meta property="og:title" content="modsiw's iBulk Image Converter">
+    <meta property="og:description" content="Convert your images in bulk to different formats with ease and efficiency.">
+    <meta property="og:image" content="https://ibulk.rl2.io/image.jpg">
+    <meta property="og:url" content="https://ibulk.rl2.io">
+    <meta property="og:site_name" content="modsiw's iBulk Image Converter">
+    <meta property="og:type" content="website">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link id="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">modsiw's iBulk Image Converter</h1>
+        <div class="card mb-4 shadow">
+            <div class="card-body">
+                <p class="text-justify">Welcome to modsiw's iBulk Image Converter, the place where your image conversion process becomes a breeze. Our platform allows you to convert your images in bulk to different formats with a simple click. Say goodbye to tedious manual conversions, irritating ads, annoying pop-ups and spammy interfaces. iBulk is here to save your time and effort with a user-friendly, efficient and ad-free experience.</p>
+            </div>
+        </div>
+        <div class="text-right mt-4">
+            <div class="custom-control custom-switch d-inline-block">
+                <input type="checkbox" class="custom-control-input" id="dark-mode-switch">
+                <label class="custom-control-label" for="dark-mode-switch"><i class="fas fa-lightbulb"></i> Dark Mode</label>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <form id="conversion-form" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="file">Choose images:</label>
+                        <input type="file" class="form-control-file" id="file" name="file" accept=".png, .jpg, .jpeg, .gif" multiple>
+                        <small class="form-text text-muted">Select multiple files, it works!</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="output_format">Select output format:</label>
+                        <div class="row align-items-end">
+                            <div class="col-md-4">
+                                <select class="form-control" id="output_format" name="output_format">
+                                    <option value="png">PNG</option>
+                                    <option value="jpg">JPG</option>
+                                    <option value="jpeg">JPEG</option>
+                                    <option value="gif">GIF</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="dimension-switch">
+                                    <label class="custom-control-label" for="dimension-switch">Set Dimensions</label>
+                                </div>
+                            </div>
+                            <div id="dimension-controls" class="col-md-4 d-none">
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="number" class="form-control" id="width" name="width" min="1" placeholder="W in pixels">
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" class="form-control" id="height" name="height" min="1" placeholder="H in pixels">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Convert</button>
+                </form>
+            </div>
+        </div>
+        <p id="message" class="mt-4"></p>
+        <footer class="mt-5">
+            <p>If you like this app, follow me on Twitter <a href="https://twitter.com/itsmodsiw">@itsmodsiw</a> - Thanks!</p>
+        </footer>
+    </div>
+    <script>
+        var form = document.getElementById('conversion-form');
+        form.addEventListener('submit', function() {
+            document.getElementById('message').textContent = 'Your ZIP file is downloading...';
+        });
+
+        form.addEventListener('change', function() {
+            document.getElementById('message').textContent = 'Oh, you made an edit. You need to convert again!';
+        });
+
+        document.getElementById('dark-mode-switch').addEventListener('change', function() {
+            var stylesheet = document.getElementById('stylesheet');
+            if (this.checked) {
+                stylesheet.setAttribute('href', "{{ url_for('static', filename='css/styles-dark.css') }}");
+            } else {
+                stylesheet.setAttribute('href', "{{ url_for('static', filename='css/styles.css') }}");
+            }
+        });
+
+        document.getElementById('dimension-switch').addEventListener('change', function() {
+            var dimensionControls = document.getElementById('dimension-controls');
+            if (this.checked) {
+                dimensionControls.classList.remove('d-none');
+            } else {
+                dimensionControls.classList.add('d-none');
+            }
+        });
+    </script>
+</body>
+</html>
