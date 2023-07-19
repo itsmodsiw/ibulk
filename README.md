@@ -1,17 +1,18 @@
 # modsiw's iBulk Image Converter
 
-[![Python](https://img.shields.io/badge/Python-3.9-blue?style=flat-square&logo=python)](https://www.python.org/downloads/release/python-390/)
-[![Flask](https://img.shields.io/badge/Flask-2.0.1-blue?style=flat-square&logo=flask)](https://flask.palletsprojects.com/)
-[![Pillow](https://img.shields.io/badge/Pillow-8.3.1-blue?style=flat-square&logo=pypi)](https://pypi.org/project/Pillow/)
-[![NumPy](https://img.shields.io/badge/NumPy-1.21.0-blue?style=flat-square&logo=numpy)](https://numpy.org/)
-[![SciPy](https://img.shields.io/badge/SciPy-1.7.0-blue?style=flat-square&logo=scipy)](https://www.scipy.org/)
-[![OpenCV](https://img.shields.io/badge/OpenCV-4.5.3-blue?style=flat-square&logo=opencv)](https://opencv.org/)
-[![Matplotlib](https://img.shields.io/badge/Matplotlib-3.4.2-blue?style=flat-square&logo=python)](https://matplotlib.org/)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.5.0-blue?style=flat-square&logo=tensorflow)](https://www.tensorflow.org/)
+[![Python](https://img.shields.io/badge/Python-3.11-blue?style=flat-square&logo=python)](https://www.python.org/downloads/release/python-311/)
+[![Flask](https://img.shields.io/badge/Flask-2.0.1-red?style=flat-square&logo=flask)](https://flask.palletsprojects.com/)
+[![Pillow](https://img.shields.io/badge/Pillow-8.3.1-yellow?style=flat-square&logo=pypi)](https://pypi.org/project/Pillow/)
+[![NumPy](https://img.shields.io/badge/NumPy-1.21.0-green?style=flat-square&logo=numpy)](https://numpy.org/)
+[![SciPy](https://img.shields.io/badge/SciPy-1.7.0-orange?style=flat-square&logo=scipy)](https://www.scipy.org/)
+[![OpenCV](https://img.shields.io/badge/OpenCV-4.5.3-purple?style=flat-square&logo=opencv)](https://opencv.org/)
+[![Matplotlib](https://img.shields.io/badge/Matplotlib-3.4.2-blueviolet?style=flat-square&logo=python)](https://matplotlib.org/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.5.0-pink?style=flat-square&logo=tensorflow)](https://www.tensorflow.org/)
 [![Keras](https://img.shields.io/badge/Keras-2.4.3-blue?style=flat-square&logo=keras)](https://keras.io/)
-[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-0.24.2-blue?style=flat-square&logo=scikit-learn)](https://scikit-learn.org/)
-[![GIMP](https://img.shields.io/badge/GIMP-2.10.24-blue?style=flat-square&logo=gimp)](https://www.gimp.org/)
+[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-0.24.2-lightgrey?style=flat-square&logo=scikit-learn)](https://scikit-learn.org/)
+[![GIMP](https://img.shields.io/badge/GIMP-2.10.24-orange?style=flat-square&logo=gimp)](https://www.gimp.org/)
 [![Inkscape](https://img.shields.io/badge/Inkscape-1.1-blue?style=flat-square&logo=inkscape)](https://inkscape.org/)
+
 
 Welcome to modsiw's iBulk Image Converter! This web application is designed to make image conversion a breeze. It allows you to convert multiple images in bulk to different formats with ease and efficiency. Say goodbye to tedious manual conversions, irritating ads, annoying pop-ups, and spammy interfaces. With iBulk, you can save time and effort while enjoying a user-friendly, efficient, and ad-free experience.
 
